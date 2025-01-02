@@ -5,7 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.MicheleAnalyst.com</title>
     <style>
-        /* Stili per l'intestazione e il logo */
+        body {
+            background-color: rgb(185, 178, 178);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Altezza minima dell'intera finestra */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            flex: 1; /* Spinge il contenuto verso l'alto */
+        }
+        .section {
+            padding: 20px 0;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Spinge il footer verso la base */
+        }
+        .cv-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .cv-button {
+            padding: 10px 20px;
+            background-color: darkgreen;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cv-button:hover {
+            background-color: green;
+        }
         .header-content {
             display: flex;
             align-items: center;
@@ -15,7 +53,7 @@
             position: relative;
         }
         .logo-container {
-            margin-right: auto; /* Spinge il logo completamente a sinistra */
+            margin-right: auto;
         }
         .logo {
             width: 60px;
@@ -27,7 +65,7 @@
             margin: 0;
             font-size: 24px;
             text-align: center;
-            flex-grow: 1; /* Centra il testo rispetto all'intera larghezza */
+            flex-grow: 1;
         }
         .dropdown-menu {
             display: none;
@@ -50,27 +88,9 @@
         .dropdown-menu a:hover {
             background-color: #ddd;
         }
-        body {
-            background-color: rgb(185, 178, 178);
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-        .section {
-            padding: 20px 0;
-        }
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
         .language-selector {
             display: flex;
-            gap: 10px; /* Spaziatura tra le bandiere */
+            gap: 10px;
         }
         .language-selector img {
             width: 30px;
@@ -85,24 +105,23 @@
         }
         .social-icons {
             display: flex;
-            gap: 15px; /* Distanza tra le icone */
-            justify-content: center; /* Allinea al centro */
-            margin-top: 10px; /* Distanza sopra le icone */
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
         }
         .social-icon {
-            width: 30px; /* Larghezza dell'icona */
-            height: 30px; /* Altezza dell'icona */
+            width: 30px;
+            height: 30px;
             transition: transform 0.2s;
         }
         .social-icon:hover {
-            transform: scale(1.1); /* Ingrandisce l'icona al passaggio del mouse */
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <!-- Logo spostato a sinistra -->
             <div class="logo-container">
                 <img src="logo_mm.png" alt="Logo MM" class="logo" id="logo">
                 <div class="dropdown-menu" id="dropdownMenu">
@@ -111,9 +130,7 @@
                     <a href="#contact">Contatti</a>
                 </div>
             </div>
-            <!-- Titolo centrato -->
             <h1>Michele Maino</h1>
-            <!-- Selettore lingua -->
             <div class="language-selector">
                 <img src="italian-flag.png" alt="Italiano" title="Italiano" onclick="changeLanguage('it')">
                 <img src="english-flag.png" alt="English" title="English" onclick="changeLanguage('en')">
@@ -143,23 +160,13 @@
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="cv" class="section cv-section">
         <div class="container">
-            <h2>Esperienze Professionali</h2>
-            <div class="experience">
-                <h3>Junior Data Analyst</h3>
-                <p><strong>Studio TER ENTERPRISE S.R.L | 2022</strong></p>
-                <ul>
-                    <li>Pulizia e preprocessamento dei dati per garantire l'integrità delle analisi.</li>
-                    <li>Creazione di visualizzazioni efficaci tramite Matplotlib e Seaborn.</li>
-                    <li>Analisi SWOT per identificare opportunità e minacce aziendali.</li>
-                    <li>Collaborazione con team internazionali per progetti complessi.</li>
-                </ul>
-            </div>
+            <h2>Scarica il mio CV</h2>
+            <a href="CV/Michele_Maino_CV.pdf" download class="cv-button">Download CV</a>
         </div>
     </section>
-
-    <section id="contact" class="section">
+       <section id="contact" class="section">
         <div class="container">
             <h2 align="center">Contatti</h2>
             <p><strong>Email:</strong> <a href="mailto:mwork8228@gmail.com">mwork8228@gmail.com</a><br>
@@ -167,7 +174,6 @@
            <strong>Telefono:</strong> +39 377 398 7778 </p>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2025 Michele Maino. Tutti i diritti riservati.</p>
@@ -175,7 +181,7 @@
                 <a href="https://www.instagram.com/micheleanalyst" target="_blank">
                     <img src="instagram-icon.png" alt="Instagram" title="Instagram" class="social-icon">
                 </a>
-                <a href="https://www.linkedin.com/in/Michele Maino" target="_blank">
+                <a href="https://www.linkedin.com/in/MicheleMaino" target="_blank">
                     <img src="linkedin-icon.png" alt="LinkedIn" title="LinkedIn" class="social-icon">
                 </a>
             </div>
@@ -183,27 +189,22 @@
     </footer>
 
     <script>
-        // JavaScript per gestire il menu a tendina
         const logo = document.getElementById('logo');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
-        // Toggle del menu quando si clicca sul logo
         logo.addEventListener('click', () => {
             const isMenuOpen = dropdownMenu.style.display === 'block';
             dropdownMenu.style.display = isMenuOpen ? 'none' : 'block';
         });
 
-        // Chiude il menu quando si clicca fuori
         document.addEventListener('click', (event) => {
             if (!logo.contains(event.target) && !dropdownMenu.contains(event.target)) {
                 dropdownMenu.style.display = 'none';
             }
         });
-    </script>
-    <script>
+
         function changeLanguage(lang) {
             alert("Lingua selezionata: " + lang.toUpperCase());
-            // Logica per cambiare lingua (es. caricamento di contenuti tradotti).
         }
     </script>
 </body>
